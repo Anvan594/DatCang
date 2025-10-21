@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đất Cảng - Trang chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/Logo/Logo.png">
+  <style>
+    body { font-family: "Poppins", Arial, sans-serif; background-color: #f5f6fa; color: #333; }
+    .navbar { background: linear-gradient(90deg, #001f3f, #0074d9); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);}
+    .navbar-brand { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; color: #fff !important;}
+    .nav-link { color: #fff !important; transition: all 0.3s;}
+    .banner { position: relative; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Banner/1.jpg') no-repeat center center/cover; height: 450px; color: #fff; display: flex; align-items: center; justify-content: center; text-align: center;}
+    .banner h1 { font-size: 2.8rem; background-color: rgba(0, 0, 0, 0.4); padding: 20px 40px; border-radius: 15px; backdrop-filter: blur(4px); position: relative; z-index: 1;}
+    .banner::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.2); z-index: 0;}
+    .product-card { border: none; border-radius: 15px; overflow: hidden; transition: all 0.4s cubic-bezier(.3,1.3,.5,1); background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border: 2px solid transparent;}
+    .product-card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 12px 32px rgba(0, 116, 217, 0.25); border: 2px solid #0074d9; z-index: 2;}
+    .product-card img { height: 350px; object-fit: contain;}
+    .product-card .card-body { padding: 20px;}
+    .product-card .btn-primary { background: linear-gradient(90deg, #0074d9, #00a8ff); border: none; transition: 0.3s;}
+    .product-card .btn-primary:hover { background: linear-gradient(90deg, #0056b3, #007bff); transform: scale(1.05);}
+    .product-price { color: #e74c3c; font-size: 1.15rem; font-weight: 700;}
+    footer { background: #001f3f; color: white; padding: 30px 0; font-size: 0.95rem; letter-spacing: 0.5px;}
+    footer p { margin: 0;}
+    body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #222;
+  padding-top: 80px; /* đủ cho fixed-top navbar */
+}
+@media (max-width: 768px) {
+  body { padding-top: 65px; }
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #023f7c 60%, #0074d9 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #fff !important;
+  text-shadow: 1px 2px 8px #0052a0a0;
+}
+.nav-link {
+  color: #fff !important;
+  transition: all 0.3s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.nav-link:hover, .nav-link.active {
+  color: #ffc107 !important;
+  transform: scale(1.07);
+  text-shadow: 0 1px 6px #fff1;
+}
+.nav-item .dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 3px 24px #001f3f22;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.48)),
+      url('./images/Banner/1.jpg') no-repeat center center/cover;
+  height: 420px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 38px 38px;
+  box-shadow: 0 4px 32px #001f3f20;
+}
+.banner h1 {
+  font-size: 2.8rem;
+  background-color: rgba(0, 0, 0, 0.32);
+  padding: 23px 45px;
+  border-radius: 17px;
+  backdrop-filter: blur(3px);
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 18px #0007;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 210px;
+    border-radius: 0 0 18px 18px;
+  }
+  .banner h1 {
+    font-size: 1.3rem;
+    padding: 10px 10px;
+  }
+}
+
+/* Sản phẩm: Card */
+.product-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 30, 60, 0.11);
+  border: 2px solid transparent;
+  transition: all 0.38s cubic-bezier(.3,1.3,.5,1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.product-card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 14px 34px rgba(0, 80, 160, 0.18);
+  border: 2px solid #1573d6;
+  z-index: 2;
+}
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #f0f6ff;
+  border-radius: 18px 18px 0 0;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 12px #0074d924;
+}
+@media (max-width: 992px) {
+  .product-card img { height: 180px; }
+}
+@media (max-width: 768px) {
+  .product-card img { height: 130px; }
+}
+.product-card .card-body {
+  padding: 18px 14px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.product-card .card-title {
+  font-size: 1.09rem;
+  font-weight: 600;
+  color: #14305a;
+  margin-bottom: 0.6rem;
+}
+.product-card .card-text {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  color: #e74c3c;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+/* Button trong card */
+.product-card .btn-primary {
+  background: linear-gradient(90deg, #0074d9, #00a8ff 90%);
+  border: none;
+  transition: 0.3s;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px #0074d914;
+}
+.product-card .btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #1573d6 95%);
+  transform: scale(1.04);
+  color: #fff;
+}
+
+/* Responsive columns cho grid */
+@media (max-width: 992px) {
+  .col-md-3, .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .col-md-3, .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Footer & Liên hệ */
+footer {
+  background: #001f3f;
+  color: white;
+  padding: 30px 0;
+  font-size: 0.97rem;
+  letter-spacing: 0.5px;
+}
+footer p { margin: 0; }
+#contact iframe { min-height: 200px; height: 220px;}
+@media (max-width: 768px) {
+  #contact .row { flex-direction: column; }
+  #contact .col-md-6 { width: 100%; max-width: 100%; }
+  #contact iframe { height: 150px; }
+}
+
+/* Brand button */
+.brand-btn {
+  display: inline-block;
+  color: #fff;
+  background: #0074d9;
+  border: 2px solid #0074d9;
+  border-radius: 20px;
+  padding: 8px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin: 0 6px 5px 6px;
+  cursor: pointer;
+}
+.brand-btn:hover, .brand-btn.active {
+  color: #fff;
+  background: #0056b3;
+  border-color: #0056b3;
+  text-decoration: none;
+}
+.brand-btn.active {
+  box-shadow: 0 2px 8px rgba(0, 116, 217, 0.25);
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container" style="text-align: left;">
+      <img src="./images/Logo/Logo.png" alt="DatCang" height="60" class="me-2">
+      <a class="navbar-brand" href="index.html">Đất Cảng</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sản Phẩm</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="muc.html">Mực In</a></li>
+              <li><a class="dropdown-item" href="mayin.html">Máy In</a></li>
+              <li><a class="dropdown-item" href="camera.html">Camera</a></li>
+              <li><a class="dropdown-item" href="lomuc.html">Lọ Mực</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Mực In CT-CAM - Chất Lượng Hàng Đầu</h1>
+  </div>
+
+  <!-- Giới thiệu & Sản phẩm nổi bật -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Sản Phẩm Nổi Bật</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card product-card">
+          <img src="./images/printer_ink/Q2612A.jpg" class="card-img-top" alt="Mực HP 12A">
+          <div class="card-body">
+            <h5 class="card-title">Hộp mực I.Aicon Q2612A</h5>
+            <p class="card-text">Canon LBP-2900, Canon LBP-3000. In đậm, rõ nét.</p>
+            <p class="product-price mb-2"><strong>Giá:</strong> 320.000đ</p>
+            <a href="muc.html" class="btn btn-primary w-100">Xem Tất Cả Mực</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card product-card">
+          <img src="./images/May_In/may-in-canon-mf267dw-moi-100.jpg" class="card-img-top" alt="Máy In canon MF264dw">
+          <div class="card-body">
+            <h5 class="card-title">Máy In canon MF264dw</h5>
+            <p class="card-text">Tốc độ in nhanh, bền bỉ, phù hợp văn phòng nhỏ.</p>
+            <p class="product-price mb-2"><strong>Giá:</strong> 4.800.000đ</p>
+            <a href="mayin.html" class="btn btn-primary w-100">Xem Tất Cả Máy In</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card product-card">
+          <img src="./images/Camera/1692949698950319793-1.jpg" class="card-img-top" alt="Camera CT-CAM">
+          <div class="card-body">
+            <h5 class="card-title">Camera Sirihome 4MP 2K+</h5>
+            <p class="card-text">Quan sát ngày đêm, hình ảnh rõ nét, tích hợp AI.</p>
+            <p class="product-price mb-2"><strong>Giá:</strong> 890.000đ</p>
+            <a href="camera.html" class="btn btn-primary w-100">Xem Tất Cả Camera</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card product-card">
+          <img src="./images/Muc/unnamed-(1).jpg" class="card-img-top" alt="muc">
+          <div class="card-body">
+            <h5 class="card-title">Mực SYHNY</h5>
+            <p class="card-text">Đổ cho các loại máy in canon 2900/3000, HP 401/402/404 ...</p>
+            <p class="product-price mb-2"><strong>Giá:</strong> 30.000đ</p>
+            <a href="camera.html" class="btn btn-primary w-100">Xem Tất Cả Camera</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-left">
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-4">Liên Hệ Với Chúng Tôi</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5>Thông Tin Liên Hệ</h5>
+                    <p><strong>Địa chỉ:</strong> 391 Phạm Văn Đồng - Dương Kinh - Hải Phòng</p>
+                    <p><strong>Điện thoại:</strong> 0909 123 456</p>
+                    <p><strong>Email:</strong> test.gmail.com</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps?q=391+Phạm+Văn+Đồng,+Dương+Kinh,+Hải+Phòng&output=embed"
+                        width="90%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

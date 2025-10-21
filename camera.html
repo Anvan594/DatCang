@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đất Cảng - Camera</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/Logo/Logo.png">
+  <style>
+    body { font-family: "Poppins", Arial, sans-serif; background-color: #f5f6fa; color: #333;}
+    .navbar { background: linear-gradient(90deg, #001f3f, #0074d9);}
+    .product-card { border: none; border-radius: 15px; overflow: hidden; transition: all 0.4s cubic-bezier(.3,1.3,.5,1); background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border: 2px solid transparent;}
+    .product-card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 12px 32px rgba(0, 116, 217, 0.25); border: 2px solid #0074d9; z-index: 2;}
+    .product-card img { height: 400px; object-fit: cover;}
+    .product-card .card-body { padding: 20px;}
+    .product-card .btn-primary { background: linear-gradient(90deg, #0074d9, #00a8ff);}
+    .product-price { color: #e74c3c; font-size: 1.15rem; font-weight: 700;}
+    footer { background: #001f3f; color: white; padding: 30px 0; font-size: 0.95rem;}
+    footer p { margin: 0;}
+    body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #222;
+  padding-top: 80px;
+}
+@media (max-width: 768px) {
+  body { padding-top: 65px; }
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #001f3f 60%, #0074d9 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #fff !important;
+  text-shadow: 1px 2px 8px #0052a0a0;
+}
+.nav-link {
+  color: #fff !important;
+  transition: all 0.3s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.nav-link:hover, .nav-link.active {
+  color: #ffc107 !important;
+  transform: scale(1.07);
+  text-shadow: 0 1px 6px #fff1;
+}
+.nav-item .dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 3px 24px #001f3f22;
+}
+
+/* Section title */
+h2.text-center {
+  font-size: 2rem;
+  color: #0074d9;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  h2.text-center { font-size: 1.25rem; margin-top: 1rem; }
+}
+
+/* Card sản phẩm */
+.product-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 30, 60, 0.11);
+  border: 2px solid transparent;
+  transition: all 0.38s cubic-bezier(.3,1.3,.5,1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.product-card:hover {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 14px 34px rgba(0, 80, 160, 0.18);
+  border: 2px solid #1573d6;
+  z-index: 2;
+}
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #f0f6ff;
+  border-radius: 18px 18px 0 0;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 12px #0074d924;
+}
+@media (max-width: 992px) {
+  .product-card img { height: 150px; }
+}
+@media (max-width: 576px) {
+  .product-card img { height: 110px; }
+}
+.product-card .card-body {
+  padding: 16px 12px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.product-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #14305a;
+  margin-bottom: 0.6rem;
+}
+.product-card .card-text {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  color: #e74c3c;
+  font-size: 1.09rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.product-card .btn-primary {
+  background: linear-gradient(90deg, #0074d9, #00a8ff 90%);
+  border: none;
+  transition: 0.3s;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px #0074d914;
+  font-size: 1rem;
+}
+.product-card .btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #1573d6 95%);
+  transform: scale(1.04);
+  color: #fff;
+}
+
+/* Responsive columns cho grid */
+@media (max-width: 992px) {
+  .col-md-4 { flex: 0 0 50%; max-width: 50%; }
+}
+@media (max-width: 576px) {
+  .col-md-4 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Footer */
+footer {
+  background: #001f3f;
+  color: white;
+  padding: 30px 0;
+  font-size: 0.97rem;
+  letter-spacing: 0.5px;
+}
+footer p { margin: 0; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <img src="./images/Logo/Logo.png" alt="DatCang" height="60" class="me-2">
+      <a class="navbar-brand" href="index.html">Đất Cảng</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sản Phẩm</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="muc.html">Mực In</a></li>
+              <li><a class="dropdown-item" href="mayin.html">Máy In</a></li>
+              <li><a class="dropdown-item active" href="camera.html">Camera</a></li>
+              <li><a class="dropdown-item" href="lomuc.html">Lọ Mực</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Camera</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="./images/Camera/1692949698950319793-1.jpg" class="card-img-top" alt="Camera CT-CAM">
+          <div class="card-body">
+            <h5 class="card-title">Camera sirihome 2MP</h5>
+            <p class="card-text">Quan sát ngày đêm, hình ảnh rõ nét, tích hợp AI.</p>
+            <p class="product-price mb-2"><strong>Giá:</strong> 890.000đ</p>
+            <a href="#" class="btn btn-primary w-100">Xem Chi Tiết</a>
+          </div>
+        </div>
+      </div>
+      <!-- Thêm các sản phẩm camera khác -->
+    </div>
+  </section>
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 CT-CAM. Bản quyền được bảo hộ.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
